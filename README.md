@@ -281,6 +281,18 @@ Main author:
 
 * David Linke (ORCID: 0000-0002-5898-1820) - Idea, initial setup of repository and current maintainer.
 
+## Deprecation of monarch-project-template
+
+This copier template is now the **official replacement** for the deprecated [monarch-project-template](https://github.com/monarch-initiative/monarch-project-template) cookiecutter template. 
+
+The old template can be safely deprecated because:
+- ✅ **Complete feature parity**: All functionality is preserved or upgraded
+- ✅ **Better tooling**: Modern, faster alternatives (uv, just, mkdocs vs poetry, tox, sphinx)  
+- ✅ **Enhanced capabilities**: LinkML integration, AI workflows, comprehensive CI/CD
+- ✅ **Migration path**: Clear documentation and parameter mapping provided
+- ✅ **Future-proof**: Copier's update mechanism keeps projects current
+
+See [FEATURE_COMPARISON.md](FEATURE_COMPARISON.md) for detailed analysis.
 
 ## Acknowledgement
 

@@ -1,0 +1,27 @@
+name: Typos
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  CLICOLOR: 1
+
+jobs:
+  spelling:
+    name: Spell check with typos
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+
+      # https://github.com/crate-ci/typos
+      - name: Run typos on repo
+        uses: crate-ci/typos@v1.34.0

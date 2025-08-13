@@ -1,0 +1,31 @@
+name: Codespell
+
+on:  # yamllint disable-line rule:truthy
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  CLICOLOR: 1
+
+permissions: {}
+
+jobs:
+  codespell:
+    name: Spell check with codespell
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          persist-credentials: false
+
+      # https://github.com/codespell-project/actions-codespell
+      - name: Run codespell on Repo
+        uses: codespell-project/actions-codespell@v2.1
+        with:
+          skip: '*.js'

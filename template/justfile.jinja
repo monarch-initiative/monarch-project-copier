@@ -100,6 +100,7 @@ gh-add-secrets:
   gh secret set ANTHROPIC_API_KEY --body "$ANTHROPIC_API_KEY"
   gh secret set OPENAI_API_KEY --body "$OPENAI_API_KEY"
   gh secret set CBORG_API_KEY --body "$CBORG_API_KEY"
+  gh secret set CLAUDE_CODE_OATH_TOKEN --body "$CLAUDE_CODE_OATH_TOKEN"
 
 gh-invite-the-dragon:
   gh api repos/{{github_org}}/{{project_name}}/collaborators/dragon-ai-agent -X PUT -f permission=push

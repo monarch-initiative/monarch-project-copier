@@ -74,6 +74,16 @@ github_handle:
   type: str
   default: "{{ github_org }}"
 
+min_python_version:
+  help: Minimum Python version requirement
+  type: str
+  default: "3.10"
+  choices:
+    - "3.9"
+    - "3.10"
+    - "3.11"
+    - "3.12"
+
 gh_action_docs_preview:
   help: |
     Use GitHub actions for a documentation preview in pull requests?

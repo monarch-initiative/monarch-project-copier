@@ -1,11 +1,27 @@
 # A Copier Template for Monarch Projects
 
+> **✨ This template replaces the deprecated [monarch-project-template](https://github.com/monarch-initiative/monarch-project-template)** which used cookiecutter. This new copier-based template provides modern tooling, LinkML integration, and enhanced development workflows.
+
 This template uses the code-scaffolding tool [copier](https://copier.readthedocs.io/) to create  project following Monarch/BBOP standards.
 Copier supports code lifecycle management, allowing you to seamlessly incorporate updates into your project when the template is enhanced.
 
 The generated project uses [just](https://github.com/casey/just) as preferred command runner, even in the 0.1.x releases.
 
 > The starting point of this template was [linkml-project-copier](https://github.com/linkml/linkml-project-copier/) from @dalito
+
+## Prerequisites
+
+### Why Use This Template Instead of the Old One?
+
+This copier template provides significant advantages over the deprecated cookiecutter template:
+
+- **🚀 Modern Tooling**: Uses `uv` (faster than poetry), `just` (simpler than tox), `mkdocs` (easier than sphinx)
+- **🔗 LinkML Integration**: Built-in support for data modeling with LinkML schemas
+- **🤖 AI-Assisted Development**: Integrated Claude/Copilot instructions and workflows  
+- **⚡ Better Performance**: Faster dependency resolution and build times
+- **🔄 Live Updates**: Copier allows seamless template updates as the project evolves
+- **📊 Enhanced CI/CD**: More comprehensive GitHub workflows with modern actions
+- **🎯 Monarch-Specific**: Tailored specifically for Monarch Initiative development patterns
 
 ## Prerequisites
 
@@ -157,6 +173,36 @@ See [How to register a code](https://monarch.io/monarch/faq/contributing.html#ho
 
 See [How to Manage Releases of your Monarch Code](https://monarch.io/monarch/howtos/manage-releases.html)
 
+## Migrating from monarch-project-template (cookiecutter) 
+
+**This copier template replaces the old [monarch-project-template](https://github.com/monarch-initiative/monarch-project-template) cookiecutter template.** The new template provides:
+
+- Modern tooling (uv instead of poetry, just instead of tox, mkdocs instead of sphinx)
+- LinkML integration for data modeling projects
+- AI-assisted development capabilities
+- More comprehensive CI/CD workflows
+- Better code quality tools
+
+### Migration Steps
+
+If you have an existing project created with the old cookiecutter template:
+
+1. **Parameter mapping**: The new template has equivalent parameters for most cookiecutter options:
+   - `project_name` → `project_name` 
+   - `project_description` → `project_description`
+   - `full_name` → `full_name`
+   - `email` → `email`
+   - `license` → `license`
+   - `min_python_version` → `min_python_version` (newly added for compatibility)
+
+2. **Tool migration**: You'll need to migrate from the old toolchain to the new one:
+   - `poetry` → `uv` (faster dependency management)
+   - `tox` → `just` (simpler command runner)
+   - `sphinx` → `mkdocs` (easier documentation)
+   - `click` → `typer` (modern CLI framework)
+
+3. **Follow the migration guide below** to update your project structure.
+
 ## Migrating an existing project to use this template
 
 This is a rough guide on the required steps.
@@ -235,6 +281,18 @@ Main author:
 
 * David Linke (ORCID: 0000-0002-5898-1820) - Idea, initial setup of repository and current maintainer.
 
+## Deprecation of monarch-project-template
+
+This copier template is now the **official replacement** for the deprecated [monarch-project-template](https://github.com/monarch-initiative/monarch-project-template) cookiecutter template. 
+
+The old template can be safely deprecated because:
+- ✅ **Complete feature parity**: All functionality is preserved or upgraded
+- ✅ **Better tooling**: Modern, faster alternatives (uv, just, mkdocs vs poetry, tox, sphinx)  
+- ✅ **Enhanced capabilities**: LinkML integration, AI workflows, comprehensive CI/CD
+- ✅ **Migration path**: Clear documentation and parameter mapping provided
+- ✅ **Future-proof**: Copier's update mechanism keeps projects current
+
+See [FEATURE_COMPARISON.md](FEATURE_COMPARISON.md) for detailed analysis.
 
 ## Acknowledgement
 

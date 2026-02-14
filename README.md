@@ -1,6 +1,6 @@
 # A Copier Template for Monarch Projects
 
-This template uses the code-scaffolding tool [copier](https://copier.readthedocs.io/) to create  project following Monarch/BBOP standards.
+This template uses the code-scaffolding tool [copier](https://copier.readthedocs.io/) to create a project following Monarch/BBOP standards.
 Copier supports code lifecycle management, allowing you to seamlessly incorporate updates into your project when the template is enhanced.
 
 The generated project uses [just](https://github.com/casey/just) as preferred command runner, even in the 0.1.x releases.
@@ -156,6 +156,12 @@ See [How to register a code](https://monarch.io/monarch/faq/contributing.html#ho
 ### Making releases
 
 See [How to Manage Releases of your Monarch Code](https://monarch.io/monarch/howtos/manage-releases.html)
+
+### Configuring builds
+
+This project template uses the Hatchling build backend by default.
+
+If you need to specifically include specific files in the build process (e.g., YAML, JSON, or other non-Python files to include along with each release), please see the [Hatchling documentation](https://hatch.pypa.io/latest/config/build/#file-selection).
 
 ## Migrating an existing project to use this template
 
